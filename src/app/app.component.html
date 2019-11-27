@@ -1,1 +1,25 @@
-<h1>Campeonato Brasileiro</h1>
+<h3>Temperatura</h3>
+
+<form action="">
+<input type="radio" value="sp" name="states" (click)="loadWeather('sp')" checked> São Paulo
+<input type="radio" value="rj" name="states" (click)="loadWeather('rj')"> Rio de Janeiro
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dia</th>
+      <th>Min.</th>
+      <th>Máx.</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let w of weathers">
+      <td>{{ w.applicable_date }}</td>
+      <td>{{ w.min_temp }}</td>
+      <td>{{ w.max_temp }}</td>
+      <td><img src="{{ w.weather_state_abbr }}" alt=""></td>
+    </tr>
+  </tbody>
+</table>
