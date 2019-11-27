@@ -26,9 +26,6 @@ export class AppComponent {
           weather.weather_state_abbr = '../assets/images/' + weather.weather_state_abbr + '.svg';
           this.weathers.push(weather);
         });
-
-        // this.weathers = data;
-        console.log(this.weathers);
       }
     );
   }
